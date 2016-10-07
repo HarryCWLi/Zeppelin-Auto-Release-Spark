@@ -7,4 +7,3 @@ Step 1 : Modify release_resource.py
 
 Step 2 :
 Run python release_resource.py
-
