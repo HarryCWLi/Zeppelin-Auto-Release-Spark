@@ -9,6 +9,8 @@ root_url_list = ['http://ambari-server:9995/api', 'http://127.0.0.1:8080/api']
 check_interval = 600
 release_overtime = 600
 
+
+
 def get_notebook_list(root_url):
 	cmd = 'curl -s %s/notebook/' % root_url
 	result_dict = json.loads(os.popen(cmd).read().strip())
@@ -106,7 +108,7 @@ if __name__ == '__main__':
 	
 	while len(threads) > 0:
 		try:
-			threads = [t.join(3600) for t in threads if t is not None and t.isAlive()]
+			threads2 = [t.join(3600) for t in threads if t is not None and t.isAlive()]
 				
 		except KeyboardInterrupt:
 			print 'Receive Ctrl-C'
